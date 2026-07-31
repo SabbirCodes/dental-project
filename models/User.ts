@@ -6,8 +6,6 @@ export interface IUser extends Document {
   email: string;
   password: string;
   role: Role;
-  avatar?: string;
-  phone?: string;
   status: "active" | "pending" | "suspended";
   orgId?: Types.ObjectId;
   createdAt: Date;
@@ -24,8 +22,6 @@ const userSchema = new Schema<IUser>(
       enum: ["user", "org", "admin", "superadmin"],
       default: "user",
     },
-    avatar: String,
-    phone: String,
     status: {
       type: String,
       enum: ["active", "pending", "suspended"],
