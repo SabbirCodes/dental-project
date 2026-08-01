@@ -271,25 +271,25 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 pb-28">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-4xl rounded-2xl bg-primary px-8 py-14 text-center text-primary-foreground sm:px-14"
+          className="mx-auto max-w-4xl rounded-2xl bg-primary px-6 py-10 text-center text-primary-foreground sm:px-14 sm:py-14"
         >
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             Ready for a healthier smile?
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-primary-foreground/80">
+          <p className="mx-auto mt-3 max-w-md text-sm text-primary-foreground/80 sm:mt-4 sm:text-base">
             Browse verified dentists and book your first appointment today.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center">
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="/orgs"
-                className="rounded-lg bg-white px-6 py-3 font-medium text-primary"
+                className="block rounded-lg bg-white px-6 py-3 text-center font-medium text-primary"
               >
                 Find a dentist
               </Link>
@@ -297,7 +297,7 @@ export default function HomePage() {
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="/register"
-                className="rounded-lg border border-white/30 px-6 py-3 font-medium transition-colors hover:bg-white/10"
+                className="block rounded-lg border border-white/30 px-6 py-3 text-center font-medium transition-colors hover:bg-white/10"
               >
                 Create account
               </Link>
